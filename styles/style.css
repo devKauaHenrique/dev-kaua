@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --background: linear-gradient(to right, #2c174a 0%, #5f3281 100%);
+    --surface: #111114;
+    --primary: #8241b3;
+    --primary-hover: #A855F7;
+    --text: #FFFFFF;
+    --text-secondary: #eaeaea;
+    --border: rgba(255,255,255,.08);
+    --container: 80rem;
+}
+
+body{
+    background:var(--background);
+    color: var(--text);
+}
+
+.container{
+    width: min(90%, 80rem);
+    margin-inline: auto;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(1rem);
+    background: rgba(7,7,10,.65);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar{
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    display: block;
+    width: 12rem;
+    height: auto;
+    object-fit: contain;
+    transform: translateY(0.25rem);
+}
+
+.nav-links{
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+.nav-links a{
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.nav-links a:hover{
+    color: var(--text);
+}
+
+.btn-contact{
+    text-decoration: none;
+    color: white;
+    background: var(--primary);
+    padding: .875rem 1.5rem;
+    border-radius: .75rem;
+    transition: .3s;
+}
+
+.btn-contact:hover{
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.menu-mobile{
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.hero{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 5rem;
+}
+
+.hero-wrapper{
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hero-title{
+    font-family: "Orbitron", sans-serif;
+    font-size: 3rem;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.hero-title span{
+    display: block;
+    color: var(--primary);
+}
+
+.hero-description{
+    max-width: 38rem;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: var(--text-secondary);
+}
+
+.hero-buttons{
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-primary{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    border-radius: .75rem;
+    background: var(--primary);
+    color: var(--text);
+    text-decoration: none;
+    transition: .3s;
+}
+
+.btn-primary:hover{
+    background: var(--primary-hover);
+    transform: translateY(-.15rem);
+}
+
+.btn-secondary{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    border: .0625rem solid var(--border);
+    border-radius: .75rem;
+    color: var(--text);
+    text-decoration: none;
+    transition: .3s;
+}
+
+.btn-secondary:hover{
+    border-color: var(--primary);
+}
+
+.hero-tech{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.hero-tech span{
+    padding: .6rem 1rem;
+    border: .0625rem solid var(--border);
+    border-radius: 999rem;
+    color: var(--text-secondary);
+    font-size: .9rem;
+    transition: .3s;
+}
+
+.hero-tech span:hover{
+    background: var(--primary);
+    color: var(--text);
+}
+
+.hero-image{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.photo-container{
+    width: 30rem;
+    aspect-ratio: 1;
+    border-radius: 2rem;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--primary);
+    box-shadow: 0 4px 6px rgba(148, 84, 209, 0.436);
+    border-radius: 999rem;
+}
+
+.photo-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-badge{
+    width: fit-content;
+    padding: .75rem 1.25rem;
+    border: .0625rem solid var(--border);
+    border-radius: 999rem;
+    color: var(--text-secondary);
+    font-size: .9rem;
+    transition: .3s;
+}
+
+.hero-badge:hover{
+    background: var(--primary);
+    color: var(--text);
+}
