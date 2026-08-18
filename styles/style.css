@@ -13,18 +13,29 @@ body{
 }
 
 :root{
-    --background: linear-gradient(to right, #2c174a 0%, #5f3281 100%);
-    --surface: #111114;
-    --primary: #8241b3;
+    --background: #09090D;
+    --background-secondary: #0F0F17;
+    --surface: rgba(255,255,255,.03);
+
+    --primary: #8B5CF6;
     --primary-hover: #A855F7;
+    --primary-light: #C084FC;
+    --primary-dark: #6D28D9;
+
     --text: #FFFFFF;
-    --text-secondary: #eaeaea;
+    --text-secondary: #C8C8D0;
+
     --border: rgba(255,255,255,.08);
-    --container: 80rem;
+
+    --shadow: 0 20px 50px rgba(139,92,246,.15);
+
+    --container:80rem;
 }
 
 body{
-    background:var(--background);
+    background: radial-gradient(circle at top left, rgba(139,92,246,.28), transparent 20%),
+                radial-gradient(circle at bottom right, rgba(168,85,247,.18), transparent 60%), #09090D;
+
     color: var(--text);
 }
 
@@ -338,7 +349,8 @@ li.link-hover:hover a{
 
 .about-card{
     padding: 1.25rem 2rem;
-    background: rgba(255,255,255,.03);
+    background:rgba(255,255,255,.03);
+    backdrop-filter:blur(20px);
     border: .0625rem solid var(--border);
     border-radius: 1.5rem;
     transition: .35s ease;
