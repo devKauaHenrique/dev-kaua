@@ -528,7 +528,7 @@ li.link-hover:hover a{
 .cta-badge{
     display: flex;
     justify-content: center;
-    margin-top: 3rem;
+    margin-top: 4rem;
 }
 
 .cta-badge a{
@@ -674,4 +674,131 @@ li.link-hover:hover a{
 .btn-github:hover{
     border-color: var(--primary);
     transform: translateY(-.15rem);
+}
+
+.skills{
+    padding: 5rem 0;
+}
+
+.skills-block{
+    margin-top: 2rem;
+}
+
+.skills-block h3{
+    font-family: "Orbitron", sans-serif;
+    font-size: 1.25rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.skills-grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+}
+
+.skill-card{
+    padding: 1rem .9rem;
+    background: rgba(255,255,255,.03);
+    border: .0625rem solid var(--border);
+    border-radius: 1.5rem;
+    text-align: center;
+    transition: .35s ease;
+}
+
+.skill-card:hover{
+    transform: translateY(-.4rem);
+    border-color: var(--primary);
+    box-shadow: 0 1rem 3rem rgba(139,92,246,.18);
+}
+
+.skill-card i{
+    font-size: 3.5rem;
+    color: var(--primary);
+}
+
+.skill-card h4{
+    font-family: "Orbitron", sans-serif;
+    font-size: 1rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.skill-card p{
+    color: var(--text-secondary);
+    line-height: 1.25;
+    font-size: .8rem;
+}
+
+.skills-bottom{
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    align-items: start;
+}
+
+.tools-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.7rem;
+}
+
+.tools-grid span{
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+    padding: .9rem 1.5rem;
+    border-radius: 999px;
+    border: .0625rem solid var(--border);
+    background: rgba(255,255,255,.03);
+    color: var(--text);
+    transition: .3s;
+}
+
+.tools-grid i{
+    color: var(--primary);
+}
+
+.tools-grid span:hover{
+    background: rgba(139,92,246,.12);
+    border-color: var(--primary);
+}
+
+.practice-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: .55rem;
+}
+
+.practice-item{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: .8rem;
+    background: rgba(255,255,255,.03);
+    border: .0625rem solid var(--border);
+    border-radius: 1rem;
+    transition: .3s;
+}
+
+.practice-item:hover{
+    border-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.practice-item i{
+    width: 2rem;
+    height: 2rem;
+    display :grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(139,92,246,.12);
+    color: var(--primary);
+}
+
+.practice-item span{
+    color: var(--text);
+    font-weight: 500;
 }
