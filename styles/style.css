@@ -10,6 +10,7 @@ html{
 
 body{
     font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
 }
 
 :root{
@@ -140,13 +141,23 @@ li.link-hover:hover a{
     transform: translateY(-2px);
 }
 
-.menu-mobile{
+.hamburguer{
     display: none;
-    background: none;
     border: none;
-    color: white;
-    font-size: 2rem;
+    background: none;
+    border-top: 3px solid white;
     cursor: pointer;
+}
+
+.hamburguer::before, .hamburguer::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
 }
 
 .hero{
