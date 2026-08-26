@@ -431,6 +431,10 @@
         justify-self: center;
     }
 
+    .skills-block h3{
+        text-align: center;
+    }
+
     .skill-card{
         padding: .7rem;
     }
