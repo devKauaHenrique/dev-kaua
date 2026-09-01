@@ -1,7 +1,9 @@
-AOS.init({
-    duration: 1000,
-    easing: "ease",
-    once: true,
+document.addEventListener('DOMContentLoaded', () => {
+    AOS.init({
+        duration: 1000,
+        easing: "ease",
+        once: true,
 
-    disable: window.innerWidth < 992
+        disable: window.innerWidth < 992
+    });
 });

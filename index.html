@@ -15,31 +15,39 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" media="print" onload="this.media='all'">
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/responsive.css">
 
     <link rel="shortcut icon" href="/assets/favicon.png" type="image/png">
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
-    
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/responsive.css">
-
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WGMHDJMD4Z"></script>
+
     <script>
-        window.dataLayer = window.dataLayer || [];
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const script = document.createElement('script');
+                script.src = 'https://www.googletagmanager.com/gtag/js?id=G-WGMHDJMD4Z';
+                script.async = true;
+                document.head.appendChild(script);
 
-        function gtag(){
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-
-        gtag('config', 'G-WGMHDJMD4Z');
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-WGMHDJMD4Z');
+            }, 2500); 
+        });
     </script>
 
     <title>Kauã Henrique | Desenvolvedor Front-end</title>
@@ -51,11 +59,18 @@
         <div class="container">
             <nav class="navbar">
                 <a href="#home" class="logo">
-                    <img loading="lazy" src="assets/logo-dev-kaua.jpg" alt="Logo Dev Kauã Henrique">
+                    <picture>
+                        <source srcset="assets/logo-dev-kaua.webp" type="image/webp">
+                        <img 
+                            src="assets/logo-dev-kaua.jpg" 
+                            alt="Logo Dev Kauã Henrique" 
+                            width="392" 
+                            height="261" 
+                            loading="lazy" 
+                        />
+                    </picture>
                 </a>
-
-                <button class="hamburguer"></button>
-                
+                <button class="hamburguer"></button>               
                 <ul class="nav-links">
                     <li class="link-hover"><a href="#about">Sobre</a></li>
                     <li class="link-hover"><a href="#services">Serviços</a></li>
@@ -63,9 +78,7 @@
                     <li class="link-hover"><a href="#skills">Skills</a></li>
                     <li class="link-hover"><a href="#contact">Contato</a></li>
                 </ul>
-
-                <a href="https://wa.me/5511953736849?text=Ol%C3%A1%2C%20Kau%C3%A3!%20Encontrei%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Podemos%20falar%3F" onclick="gtag('event','clique_whatsapp')" target="_blank" class="btn-contact">
-                    Vamos conversar <i class="fa-regular fa-paper-plane"></i>
+                <a href="https://wa.me/5511953736849?text=Ol%C3%A1%2C%20Kau%C3%A3!%20Encontrei%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Podemos%20falar%3F" onclick="gtag('event','clique_whatsapp')" target="_blank" class="btn-contact"> Vamos conversar <i class="fa-regular fa-paper-plane"></i>
                 </a>
             </nav>
             <div class="overlay"></div>
@@ -258,7 +271,7 @@
             <div class="projects-grid">
                 <article class="project-card">
                     <div class="project-image">
-                        <img loading="lazy" src="assets/projetos/zanario-gourmet.jpg" alt="Projeto Zanario Gourmet">
+                        <img loading="lazy" width="600" height="400" src="assets/projetos/zanario-gourmet.jpg" alt="Projeto Zanario Gourmet">
                     </div>
                     <div class="project-content">
                         <span class="project-category">
@@ -284,7 +297,7 @@
 
                 <article class="project-card">
                     <div class="project-image">
-                        <img loading="lazy" src="assets/projetos/dev-burguer.jpg" alt="Projeto Dev Burguer">
+                        <img loading="lazy" width="600" height="400" src="assets/projetos/dev-burguer.jpg" alt="Projeto Dev Burguer">
                     </div>
                     <div class="project-content">
                         <span class="project-category">
@@ -310,7 +323,7 @@
 
                 <article class="project-card">
                     <div class="project-image">
-                        <img loading="lazy" src="assets/projetos/pequeno-grao.jpg" alt="Projeto Pequeno Grão">
+                        <img loading="lazy" width="600" height="400" src="assets/projetos/pequeno-grao.jpg" alt="Projeto Pequeno Grão">
                     </div>
                     <div class="project-content">
                         <span class="project-category">
@@ -336,7 +349,7 @@
 
                 <article class="project-card">
                     <div class="project-image">
-                        <img loading="lazy" src="assets/projetos/dev-barber.jpg" alt="Projeto Dev Barber">
+                        <img loading="lazy" width="600" height="400" src="assets/projetos/dev-barber.jpg" alt="Projeto Dev Barber">
                     </div>
                     <div class="project-content">
                         <span class="project-category">
@@ -362,7 +375,7 @@
 
                 <article class="project-card">
                     <div class="project-image">
-                        <img loading="lazy" src="assets/projetos/gugui´s-burguer.jpg" alt="Projeto Gugui´s Burguer">
+                        <img loading="lazy" width="600" height="400" src="assets/projetos/gugui´s-burguer.jpg" alt="Projeto Gugui´s Burguer">
                     </div>
                     <div class="project-content">
                         <span class="project-category">
@@ -384,7 +397,7 @@
 
                 <article class="project-card">
                     <div class="project-image">
-                        <img loading="lazy" src="assets/projetos/studioflix.jpg" alt="Projeto StudioFlix">
+                        <img loading="lazy" width="600" height="400" src="assets/projetos/studioflix.jpg" alt="Projeto StudioFlix">
                     </div>
                     <div class="project-content">
                         <span class="project-category">
@@ -609,12 +622,10 @@
 
             <div class="footer-bottom">
                 <p>
-                    © 2026 <span>Kauã Henrique</span>.
-                    Todos os direitos reservados.
+                    © 2026 <span>Kauã Henrique</span>. Todos os direitos reservados.
                 </p>
                 <p>
-                    Desenvolvido por
-                    <strong>Kauã Henrique</strong>
+                    Desenvolvido por <strong>Kauã Henrique</strong>
                 </p>
                 <a href="#home" class="back-top">
                     <i class="fa-solid fa-arrow-up"></i>
